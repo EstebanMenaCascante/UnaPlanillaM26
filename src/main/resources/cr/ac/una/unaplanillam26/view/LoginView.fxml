@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import io.github.palexdev.materialfx.controls.MFXButton?>
+<?import io.github.palexdev.materialfx.controls.MFXPasswordField?>
+<?import io.github.palexdev.materialfx.controls.MFXTextField?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.StackPane?>
+<?import javafx.scene.layout.VBox?>
+
+<AnchorPane fx:id="root" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" stylesheets="@Styles.css" xmlns="http://javafx.com/javafx/25" xmlns:fx="http://javafx.com/fxml/1" fx:controller="cr.ac.una.unaplanillam26.controller.LoginController">
+   <children>
+      <StackPane layoutY="75.0" prefHeight="400.0" prefWidth="600.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+         <children>
+            <ImageView fx:id="imvFondo" fitHeight="400.0" fitWidth="600.0" pickOnBounds="true">
+               <image>
+                  <Image url="@../resource/FondoInicioRojo.png" />
+               </image>
+            </ImageView>
+            <VBox alignment="TOP_CENTER" prefHeight="200.0" prefWidth="100.0" style="-fx-background-color: white;" StackPane.alignment="TOP_CENTER">
+               <StackPane.margin>
+                  <Insets bottom="25.0" left="25.0" right="25.0" top="25.0" />
+               </StackPane.margin>
+               <children>
+                  <ImageView fitHeight="100.0" fitWidth="90.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../resource/user.png" />
+                     </image>
+                  </ImageView>
+                  <HBox alignment="CENTER" prefHeight="61.0" prefWidth="549.0" spacing="10.0">
+                     <children>
+                        <ImageView fitHeight="40.0" fitWidth="40.0" pickOnBounds="true">
+                           <image>
+                              <Image url="@../resource/Usuario-48.png" />
+                           </image>
+                        </ImageView>
+                        <MFXTextField fx:id="txfUsuario" floatMode="BORDER" floatingText="Usuario" maxWidth="1.7976931348623157E308" onKeyPressed="#onKeyPressedTxfUser" HBox.hgrow="ALWAYS" />
+                     </children>
+                     <padding>
+                        <Insets bottom="15.0" left="15.0" right="15.0" top="15.0" />
+                     </padding>
+                  </HBox>
+                  <HBox alignment="CENTER" layoutX="10.0" layoutY="100.0" prefHeight="61.0" prefWidth="549.0" spacing="10.0">
+                     <children>
+                        <ImageView fitHeight="40.0" fitWidth="40.0" pickOnBounds="true">
+                           <image>
+                              <Image url="@../resource/Usuario-48.png" />
+                           </image>
+                        </ImageView>
+                        <MFXPasswordField fx:id="pswClave" floatMode="BORDER" floatingText="Clave" maxWidth="1.7976931348623157E308" onKeyPressed="#onKeyPressedPswUser" HBox.hgrow="ALWAYS" />
+                     </children>
+                     <padding>
+                        <Insets bottom="15.0" left="15.0" right="15.0" top="15.0" />
+                     </padding>
+                  </HBox>
+                  <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0" spacing="20.0">
+                     <children>
+                        <MFXButton fx:id="btnCancelar" onAction="#onActionBtnCancelar" prefHeight="35.0" prefWidth="99.0" style="-fx-background-color: #42A5f5;" text="Cancelar" />
+                        <MFXButton layoutX="197.0" layoutY="42.0" onAction="#onActionBtnIngresar" prefHeight="35.0" prefWidth="99.0" style="-fx-background-color: #42A5f5;" text="Ingresar" />
+                     </children>
+                  </HBox>
+               </children>
+            </VBox>
+         </children>
+      </StackPane>
+   </children>
+</AnchorPane>

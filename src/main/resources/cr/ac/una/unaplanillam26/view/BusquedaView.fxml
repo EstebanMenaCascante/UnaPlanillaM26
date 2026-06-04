@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import io.github.palexdev.materialfx.controls.MFXButton?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+
+<AnchorPane id="AnchorPane" fx:id="root" prefHeight="400.0" prefWidth="600.0" stylesheets="@Styles.css" xmlns="http://javafx.com/javafx/25" xmlns:fx="http://javafx.com/fxml/1" fx:controller="cr.ac.una.unaplanillam26.controller.BusquedaController">
+   <children>
+      <VBox layoutX="225.0" layoutY="100.0" prefHeight="200.0" prefWidth="100.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+         <children>
+            <HBox prefHeight="55.0" prefWidth="600.0" VBox.vgrow="NEVER">
+               <children>
+                  <VBox alignment="CENTER" prefHeight="55.0" prefWidth="167.0">
+                     <children>
+                        <Label styleClass="jfx-titulo-label" text="Parametros" />
+                     </children>
+                  </VBox>
+                  <VBox alignment="CENTER" prefHeight="200.0" prefWidth="100.0" HBox.hgrow="ALWAYS">
+                     <children>
+                        <Label fx:id="lblNombreVentana" styleClass="jfx-titulo-label" text="Label" />
+                     </children>
+                  </VBox>
+               </children>
+            </HBox>
+            <HBox prefHeight="100.0" prefWidth="200.0" VBox.vgrow="ALWAYS">
+               <children>
+                  <VBox fx:id="vboxParametros" prefHeight="271.0" prefWidth="168.0" spacing="10.0">
+                     <padding>
+                        <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+                     </padding>
+                  </VBox>
+                  <VBox prefHeight="200.0" prefWidth="100.0" HBox.hgrow="ALWAYS">
+                     <children>
+                        <TableView fx:id="tbvFiltro" prefHeight="200.0" prefWidth="200.0" VBox.vgrow="ALWAYS" />
+                     </children>
+                  </VBox>
+               </children>
+            </HBox>
+            <HBox alignment="CENTER" prefHeight="63.0" prefWidth="600.0" VBox.vgrow="NEVER">
+               <children>
+                  <MFXButton fx:id="btnFiltrar" onAction="#onActionBtnFiltrar" prefHeight="51.0" prefWidth="97.0" text="Filtrar" />
+                  <HBox prefHeight="100.0" prefWidth="200.0" HBox.hgrow="ALWAYS" />
+                  <MFXButton fx:id="btnAceptar" onAction="#onActionBtnAceptar" prefHeight="47.0" prefWidth="91.0" text="Aceptar" />
+               </children>
+               <VBox.margin>
+                  <Insets bottom="4.0" left="4.0" right="4.0" top="4.0" />
+               </VBox.margin>
+            </HBox>
+         </children>
+      </VBox>
+   </children>
+   <padding>
+      <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+   </padding>
+</AnchorPane>
